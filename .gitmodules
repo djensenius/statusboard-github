@@ -1,0 +1,3 @@
+[submodule "php-github-api"]
+	path = php-github-api
+	url = git://github.com/KnpLabs/php-github-api.git
