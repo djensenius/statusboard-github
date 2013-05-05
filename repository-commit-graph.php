@@ -7,7 +7,7 @@ if (defined('AUTH_TOKEN') && AUTH_TOKEN != 'your_token') {
 	$client->authenticate(AUTH_TOKEN, '', Github\Client::AUTH_HTTP_TOKEN);
 }
 
-$sevendaysago = date('Y-m-d', strtotime('-7 days')) . 'T00:00:00+00:00';
+$sevendaysago = date('Y-m-d', strtotime('-6 days')) . 'T00:00:00+00:00';
 
 $graph['graph']['title'] = "Repository Commits";
 $graph['graph']['type'] = REPOSITORY_COMMIT_GRAPH;
