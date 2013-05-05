@@ -1,7 +1,7 @@
 GitHub for Panic’s Status Board
 ==================
 
-For now only repository commit graphs are done. Feel free to fork and submit any pull requests. 
+Scripts included for repository commits, issues, and user commits. Feel free to fork and submit any pull requests. 
 
 #Installation#
 1. Init the php-github-api submodule and follow the [AutoLoad instructions](https://github.com/KnpLabs/php-github-api)
