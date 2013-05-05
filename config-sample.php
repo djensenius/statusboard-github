@@ -8,8 +8,12 @@ define('AUTH_TOKEN', 'your_token');
 define('REPOSITORY_COMMIT_GRAPH', 'line');
 
 // Define the type of graph for user commit's. Options are bar and line.
-// The user commits currently searches through the repositories specified below.
+// The user commits currently go through the repositories specified below.
 define('USER_COMMIT_GRAPH', 'bar');
+
+// Define type of graph for issues. Options are bar and line.
+// Issues currently go through repositories specified below.
+define('REPOSITORY_ISSUE_GRAPH', 'bar');
 
 // Define the repositories you wish to track.
 $repositories = array(
