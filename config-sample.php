@@ -15,6 +15,9 @@ define('USER_COMMIT_GRAPH', 'bar');
 // Issues currently go through repositories specified below.
 define('REPOSITORY_ISSUE_GRAPH', 'bar');
 
+//Set timeout for the github refresh
+define('GITHUB_REFRESH', 300);
+
 // Define the repositories you wish to track.
 $repositories = array(
 	0 => array(

@@ -11,6 +11,7 @@ $sevendaysago = date('Y-m-d', strtotime('-6 days')) . 'T00:00:00+00:00';
 
 $graph['graph']['title'] = "User Commits";
 $graph['graph']['type'] = USER_COMMIT_GRAPH;
+$graph['graph']['refreshEveryNSeconds'] = GITHUB_REFRESH;
 
 foreach ($repositories as $repository) {
 	list($username, $repo, $branch) = explode('/', $repository['repo']);

@@ -11,6 +11,7 @@ $sevendaysago = date('Y-m-d', strtotime('-6 days')) . 'T00:00:00+00:00';
 
 $graph['graph']['title'] = "Repository Commits";
 $graph['graph']['type'] = REPOSITORY_COMMIT_GRAPH;
+$graph['graph']['refreshEveryNSeconds'] = GITHUB_REFRESH;
 
 foreach ($repositories as $repository) {
 	unset($commitdate);
@@ -21,10 +22,12 @@ foreach ($repositories as $repository) {
 	foreach ($commits as $commit) {
 		if (isset($commit['commit']['author']['date'])) {
 			$date = date('l', strtotime($commit['commit']['author']['date']));
-			if (isset($commitdate[$date])) {
-				$commitdate[$date]++;
-			} else {
-				$commitdate[$date] = 1;
+			if (date('U') - date('U', strtotime($commit['commit']['author']['date'])) <= 518400) {
+				if (isset($commitdate[$date])) {
+					$commitdate[$date]++;
+				} else {
+					$commitdate[$date] = 1;
+				}				
 			}
 		}
 	}
